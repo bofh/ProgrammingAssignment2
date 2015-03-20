@@ -5,6 +5,7 @@
 ##  m <- matrix(c(2, 4, 3, 1), nrow=2, ncol=2)
 ##  x$set(m)
 ##  x$get()
+##  cacheSolve(x) # first run can be slow
 
 ## Constructor for the matrix with cached inverse function
 
@@ -13,6 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
   set <- function(y) {
     x <<- y
+    ci <<- NULL
   }
 
   get <- function() { 
