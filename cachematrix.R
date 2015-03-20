@@ -1,4 +1,4 @@
-## Matrix object with cached version of inverse function
+## Matrix object and cached version for inverse function
 ## 
 ## Example usage:
 ##  x <- makeCacheMatrix()
@@ -7,8 +7,7 @@
 ##  x$get()
 ##  cacheSolve(x) # first run can be slow
 
-## Constructor for the matrix with cached inverse function
-
+## Constructor for the matrix with cached inverse
 makeCacheMatrix <- function(x = matrix()) {
   ci <- NULL
 
@@ -35,7 +34,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## returns the inverse of the matrix, result is cached after the first run
-
 cacheSolve <- function(x, ...) {
   ci <- x$getinverse()
   if (!is.null(ci)) {
