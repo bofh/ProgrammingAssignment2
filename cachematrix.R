@@ -35,12 +35,15 @@ makeCacheMatrix <- function(x = matrix()) {
 ## returns the inverse of the matrix, result is cached after the first run
 cacheSolve <- function(x, ...) {
   ci <- x$getinverse()
+
   if (!is.null(ci)) {
     message("returning inverse matrix from cache")
     return(ci)
   }
+
   m <- x$get()
   ci <- solve(m, ...)
   x$setinverse(ci)
+
   ci
 }
