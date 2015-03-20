@@ -1,14 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Matrix object with cached version of inverse function
+## 
 
-## Write a short comment describing this function
+## Constructor for the matrix with cached inverse function
 
 makeCacheMatrix <- function(x = matrix()) {
 
 }
 
 
-## Write a short comment describing this function
+## returns the inverse of the matrix, result is cached after the first run
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
