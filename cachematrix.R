@@ -32,7 +32,6 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse, getinverse = getinverse)
 }
 
-
 ## returns the inverse of the matrix, result is cached after the first run
 cacheSolve <- function(x, ...) {
   ci <- x$getinverse()
